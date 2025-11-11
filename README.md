@@ -1,19 +1,13 @@
-📦 Sistema de Rastreamento de Estoque — Python + FastAPI
-Este projeto é um sistema básico de rastreamento de estoque desenvolvido em Python utilizando o framework FastAPI. Ele permite o controle completo de produtos, categorias e movimentações de entrada e saída, com funcionalidades de autenticação e alerta automático de estoque baixo.
+Descrição do Projeto
+O Mini Inventory Tracker é um sistema web leve e funcional, desenvolvido em Python, para auxiliar no gerenciamento e monitoramento de estoque. Ele é ideal para pequenas empresas, projetos pessoais ou para quem precisa de uma ferramenta simples para rastrear a entrada (reposição) e saída (venda/uso) de produtos.
 
-O sistema foi planejado para ser simples, eficiente e fácil de expandir. Ideal para pequenos negócios, estoques internos ou como base para projetos maiores.
+O foco principal do projeto é na integridade dos dados e na usabilidade básica, garantindo que o nível de estoque seja sempre preciso e fornecendo alertas visuais para produtos que precisam de atenção imediata.
 
-✨ Principais Recursos
- CRUD completo de produtos e categorias
+🌟 Funcionalidades Principais (MVP)
+Gestão de Produtos (CRUD): Crie, visualize, edite e exclua produtos do estoque.
 
-Registro de movimentações (entrada e saída)
+Controle de Movimentação: Formulários dedicados para registrar a Entrada e a Saída de produtos, garantindo a precisão do campo estoque_atual.
 
-Alerta automático de estoque baixo
+Alerta de Estoque Baixo: Exibição visual de destaque (linha vermelha) na lista de produtos cujas quantidades estejam abaixo do estoque_minimo definido.
 
-Autenticação de usuários com JWT
-
-Documentação automática da API via Swagger
-
-Testes com Pytest
-
-Pronto para deploy com Docker, Render ou Railway
+Histórico de Transações: Registro detalhado de todas as movimentações (Entrada e Saída), com data e quantidade, para auditoria.
