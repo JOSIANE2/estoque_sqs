@@ -1,13 +1,27 @@
-Descrição do Projeto
-O Mini Inventory Tracker é um sistema web leve e funcional, desenvolvido em Python, para auxiliar no gerenciamento e monitoramento de estoque. Ele é ideal para pequenas empresas, projetos pessoais ou para quem precisa de uma ferramenta simples para rastrear a entrada (reposição) e saída (venda/uso) de produtos.
+🚀 Funcionalidades
 
-O foco principal do projeto é na integridade dos dados e na usabilidade básica, garantindo que o nível de estoque seja sempre preciso e fornecendo alertas visuais para produtos que precisam de atenção imediata.
+➕ Cadastrar produtos com nome, descrição, quantidade e preço
 
-🌟 Funcionalidades Principais (MVP)
-Gestão de Produtos (CRUD): Crie, visualize, edite e exclua produtos do estoque.
+📄 Listar todos os produtos cadastrados
 
-Controle de Movimentação: Formulários dedicados para registrar a Entrada e a Saída de produtos, garantindo a precisão do campo estoque_atual.
+✏️ Editar informações de qualquer produto
 
-Alerta de Estoque Baixo: Exibição visual de destaque (linha vermelha) na lista de produtos cujas quantidades estejam abaixo do estoque_minimo definido.
+🗑️ Excluir produtos do estoque
 
-Histórico de Transações: Registro detalhado de todas as movimentações (Entrada e Saída), com data e quantidade, para auditoria.
+🔍 Busca rápida por nome
+
+📊 Visualização organizada em tabela
+
+💾 Script SQL incluso para criação do banco de dados
+
+🛠️ Tecnologias Utilizadas
+
+PHP – lógica do sistema e operações CRUD
+
+MySQL – banco de dados relacional
+
+HTML5 – estrutura da interface
+
+CSS3 – layout simples e responsivo
+
+JavaScript – funções de interação (busca, validações básicas)
