@@ -8,11 +8,7 @@
 
 🗑️ Excluir produtos do estoque
 
-🔍 Busca rápida por nome
-
 📊 Visualização organizada em tabela
-
-💾 Script SQL incluso para criação do banco de dados
 
 🛠️ Tecnologias Utilizadas
 
