@@ -16,12 +16,8 @@
 
 🛠️ Tecnologias Utilizadas
 
-PHP – lógica do sistema e operações CRUD
+Python – lógica do sistema e operações CRUD
 
 MySQL – banco de dados relacional
 
-HTML5 – estrutura da interface
 
-CSS3 – layout simples e responsivo
-
-JavaScript – funções de interação (busca, validações básicas)
