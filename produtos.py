@@ -1,6 +1,8 @@
 from database import conectar
+from validacao import dados_produto, inteiro
 
 def inserir_produto(nome, quantidade, preco):
+    nome, quantidade, preco = dados_produto(nome, quantidade, preco)
     db = conectar()
     cursor = db.cursor()
     sql = "INSERT INTO produtos (nome, quantidade, preco) VALUES (%s, %s, %s)"
@@ -17,6 +19,7 @@ def listar_produtos():
     return produtos
 
 def editar_produto(id, nome, quantidade, preco):
+    nome, quantidade, preco = dados_produto(nome, quantidade, preco)
     db = conectar()
     cursor = db.cursor()
     sql = "UPDATE produtos SET nome=%s, quantidade=%s, preco=%s WHERE id=%s"
@@ -33,6 +36,7 @@ def excluir_produto(id):
     db.close()
 
 def entrada_produto(id, qtd):
+    qtd = inteiro(qtd, minimo=1)
     db = conectar()
     cursor = db.cursor()
     sql = "UPDATE produtos SET quantidade = quantidade + %s WHERE id=%s"
@@ -41,11 +45,16 @@ def entrada_produto(id, qtd):
     db.close()
 
 def saida_produto(id, qtd):
+    qtd = inteiro(qtd, minimo=1)
     db = conectar()
     cursor = db.cursor()
 
     cursor.execute("SELECT quantidade FROM produtos WHERE id=%s", (id,))
-    atual = cursor.fetchone()[0]
+    registro = cursor.fetchone()
+    if registro is None:
+        db.close()
+        return False
+    atual = registro[0]
 
     if qtd > atual:
         db.close()

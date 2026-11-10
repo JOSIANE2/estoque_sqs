@@ -1,22 +1,20 @@
-Sistema de Controle de Estoque
-Um sistema simples em Python para gerenciamento de produtos e movimentação de estoque. O projeto usa Tkinter para a interface gráfica e MySQL para o banco de dados.
+# Controle de estoque
 
-O objetivo principal é controlar a entrada e saída de itens e avisar quando o estoque estiver crítico.
+Aplicação de estudo em Python com interface Tkinter e banco MySQL. Cadastra, edita e exclui produtos, movimenta quantidades e sinaliza estoque baixo (até 5 unidades).
 
-🚀 Funcionalidades
-CRUD de Produtos: Adicionar, editar e excluir produtos.
+## Preparar ambiente
+1. Instale Python 3, Tkinter e MySQL.
+2. Crie um ambiente virtual: python -m venv .venv e ative-o.
+3. Instale as dependências: python -m pip install -r requirements.txt.
+4. Em um MySQL de demonstração, execute schema.sql pelo cliente de sua preferência. Não execute sobre banco de produção.
+5. Configure as variáveis ESTOQUE_DB_HOST, ESTOQUE_DB_USER, ESTOQUE_DB_PASSWORD e ESTOQUE_DB_NAME no ambiente. Prefira usuário dedicado ao banco; não coloque senha no código. Os padrões locais mantêm compatibilidade com o projeto original.
+6. Execute python app.py.
 
-Movimentação: Botões específicos para registrar entrada e saída de mercadorias.
+## Validações
+Quantidade de cadastro inteira e não negativa; movimentação inteira e maior que zero; nome obrigatório; preço finito, não negativo e com até duas casas decimais.
 
-Alerta de Estoque Baixo: A tabela exibe um aviso "⚠ ESTOQUE BAIXO" quando a quantidade é menor ou igual a 5.
+## Limitações
+Projeto de demonstração sem autenticação, histórico de movimentações ou suporte seguro a movimentações concorrentes. A rotina de saída ainda faz leitura e atualização separadas. O script SQL é uma instalação inicial, não uma migração de banco existente. Integração com MySQL e interface gráfica precisam de teste no ambiente de uso.
 
-Validações: Impede a saída de produtos se a quantidade solicitada for maior que a disponível.
-
-🛠️ Tecnologias
-Python 3.x
-
-Tkinter (Interface nativa do Python)
-
-MySQL (Banco de dados)
-
-Biblioteca mysql-connector-python
+## Créditos
+Repositório mantido por JOSIANE2. A revisão do código e da documentação contou com assistência de IA.
